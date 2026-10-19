@@ -14,7 +14,7 @@ Locally checks and covers potentially explicit images and videos as you browse.
 
 ### Full description
 
-ClearSight helps reduce unwanted explicit imagery by checking images, animated GIFs, video frames, and CSS background images on websites you visit. It covers media while it is checked and reveals media that passes the selected thresholds.
+ClearSight helps reduce unwanted explicit imagery by checking images, animated GIFs, video frames, and CSS background images on websites you visit. It covers media while it is checked and reveals media that passes the selected thresholds. While Protection is on, it also uses scroll events locally to schedule media checks and clicks on covered media to reveal it for 15 seconds; it does not log or transmit these interactions.
 
 Protection starts only after you review the disclosure, agree, and enable it. To provide this feature, ClearSight reads page URLs, eligible media URLs and pixels, nearby link destinations, limited page labels and navigation/header text, and local classification results. Analysis runs in your browser with models bundled in the extension. ClearSight does not send this page information or the results to its developer or a ClearSight server, save them in extension storage, sell them, or use them for advertising or analytics.
 
@@ -26,7 +26,7 @@ Keep the listing screenshots, promotional images, and website neutral. Do not in
 
 ## Dashboard data-use draft
 
-Declare website content and resources and web-browsing activity if those categories are offered. The page URLs, media URLs and pixels, nearby link destinations, limited page labels/navigation text, and classifier results are accessed only to provide the disclosed content-covering feature, after the user agrees and enables Protection. The extension analyzes this information locally and does not transmit it to the developer, sell it, use it for advertising, or allow people to read it. When protected media must be requested from its source, that source receives a normal browser-session request. Keep the dashboard answers consistent with this listing and the hosted privacy policy.
+Declare website content and resources and web-browsing activity. Also declare user activity because ClearSight uses scroll events to schedule checks and clicks on covered media to reveal it. The page URLs, media URLs and pixels, nearby link destinations, limited page labels/navigation text, classifier results, and these transient interaction events are used only for the disclosed content-covering feature, after the user agrees and enables Protection. Processing is local; ClearSight does not log or transmit these values to its developer, sell them, use them for advertising, or allow people to read them. When protected media must be requested from its source, that source receives a normal browser-session request. Keep the dashboard answers consistent with this listing, the in-product disclosure, and the hosted privacy policy.
 
 ## Permission justifications
 
@@ -41,7 +41,7 @@ Select **No, I am not using remote code**. The JavaScript runtime and models are
 
 ## Data use disclosure
 
-ClearSight handles web browsing activity and website content/resources, including the current page URL, eligible media URLs and pixels, nearby link destinations, and local classifier results. It uses this information only to provide the disclosed content-covering feature. Processing is local; ClearSight does not send it to the developer or a ClearSight server, sell it, use it for advertising, or let people read it. Protection and sensitivity settings are stored locally. When inaccessible media must be fetched, the source website may receive a request made with the browser's existing session. Declare the relevant website-content and browsing-activity data categories in the dashboard, if offered, and certify the Limited Use disclosures only after checking them against the final build and privacy policy.
+ClearSight handles web browsing activity and website content/resources, including the current page URL, eligible media URLs and pixels, nearby link destinations, and local classifier results. It also uses scroll events to schedule media checks and clicks on covered media to reveal it for 15 seconds. These interactions are not logged or transmitted. Declare web-browsing activity, website content/resources, and user activity in the dashboard. Processing is local; ClearSight does not send these values to the developer or a ClearSight server, sell them, use them for advertising, or let people read them. Protection and sensitivity settings are stored locally. When inaccessible media must be fetched, the source website may receive a request made with the browser's existing session. Certify the Limited Use disclosures only after checking them against the final build and hosted privacy policy.
 
 ## Detection limitations
 

@@ -1286,6 +1286,7 @@
   }
 
   window.addEventListener("scroll", () => {
+    if (!settings.enabled) return;
     lastScrollAt = performance.now();
     clearTimeout(scrollIdleTimer);
     scrollIdleTimer = setTimeout(flushDeferredImages, SCROLL_IDLE_MS);

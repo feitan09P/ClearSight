@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ClearSight — private content blur",
-  "version": "0.10.39",
+  "version": "0.10.40",
   "description": "Blur likely explicit images and videos locally as you browse.",
   "icons": {
     "16": "assets/icons/icon16.png",
