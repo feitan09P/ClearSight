@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ClearSight Privacy Policy</title>
+    <link rel="stylesheet" href="privacy.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>ClearSight Privacy Policy</h1>
+        <p class="updated">Last updated: October 19, 2026</p>
+      </header>
+
+      <section>
+        <h2>At a glance</h2>
+        <p>ClearSight processes page information locally to identify media you choose to cover. It does not send page information, media, video frames, or classification results to a ClearSight server, permit ClearSight personnel to read them, sell them, or use them for advertising.</p>
+      </section>
+
+      <section>
+        <h2>Consent and control</h2>
+        <p>Before ClearSight first checks page content, its popup explains what information is accessed and how it is used. Protection starts only after you select the agreement checkbox and choose “Agree and enable Protection.” You can pause Protection at any time or withdraw consent in the popup. Withdrawing consent disables Protection and stops optional tab capture.</p>
+      </section>
+
+      <section>
+        <h2>What ClearSight can access</h2>
+        <p>ClearSight requests access to websites so its content script can read the current page URL, find media URLs and pixels for images, thumbnails, animated GIFs, CSS backgrounds and visible video frames, and inspect nearby link destinations. To identify thumbnails and pages or media that should be covered promptly, it may also inspect limited page labels and element metadata, such as alt text, accessible labels, roles, classes, or IDs, and text in navigation or header areas. This includes eligible embedded frames, such as some advertising frames. Protection can be turned off in the extension popup, and website access can be limited or revoked in your browser's extension settings.</p>
+        <p>Page URLs, media sources, link destinations, decoded media pixels, and classifier results are processed in memory for scanning. ClearSight may keep short-lived in-memory results during the tab session to avoid repeating a classification. It does not save these page values or results in extension storage. Your protection and sensitivity settings are saved in Chrome's local extension storage.</p>
+        <p>When a site's browser security rules prevent a video or image from being analyzed directly, ClearSight may retrieve eligible media from its source website using the browser's existing connection and session. That request can include the usual connection information and cookies available to your browser. The source website and media host receive the request and apply their own privacy practices.</p>
+      </section>
+
+      <section>
+        <h2>How this information is used</h2>
+        <p>ClearSight accesses page URLs, media sources and pixels, nearby link destinations, limited media labels and navigation/header text, and classification results only as needed to identify media and apply or remove covers. In particular, the limited text and labels help recognize adult-content pages and thumbnail tiles so likely unsafe media can be covered without waiting for model classification. It does not use this information for unrelated purposes, advertising, analytics, or profiling. Scanning starts only after you agree to the disclosure and enable Protection. You can pause Protection or withdraw consent in the popup; this stops scanning and optional tab capture.</p>
+        <p>ClearSight does not send page information, media, video frames, or classification results to its developer, a ClearSight server, or a classification service. The source website or media host may receive a request only when ClearSight needs to retrieve eligible media that the browser will not expose directly, as described above.</p>
+      </section>
+
+      <section>
+        <h2>On-device analysis</h2>
+        <p>The bundled NSFWJS and NudeNet models classify media locally in the browser. ClearSight offers separate thresholds for explicit-content scores and exposed-body-part detections, and does not transmit classifier inputs or results to its developer or another classification service.</p>
+        <p>ClearSight can miss unsafe content or blur safe content by mistake, and results may vary across media. Its models and runtime are packaged with the extension so classification can run locally.</p>
+      </section>
+
+      <section>
+        <h2>Optional video capture</h2>
+        <p>Some websites block access to video pixels. If you choose “Enable video capture for this tab,” Chrome asks you to grant the optional tab-capture permission. Captured frames are analyzed locally for that tab. Audio is passed through locally to keep playback working; ClearSight does not record or upload the capture.</p>
+      </section>
+
+      <section>
+        <h2>Third-party services</h2>
+        <p>ClearSight does not use analytics or advertising services. If you choose the Ko-fi support link, your browser opens Ko-fi, which is governed by Ko-fi's own privacy policy. ClearSight does not receive payment details through that link.</p>
+      </section>
+
+      <section>
+        <h2>Chrome Web Store Limited Use</h2>
+        <p>The use of information received from Chrome APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements. ClearSight accesses this information only for its single disclosed purpose: locally identifying and covering potentially explicit media on pages you choose to browse.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>For questions about this policy, contact <a href="mailto:drjormo@gmail.com">drjormo@gmail.com</a>.</p>
+      </section>
+    </main>
+  </body>
+</html>

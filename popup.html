@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="popup.title">ClearSight</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <div class="topbar">
+        <div>
+          <h1>ClearSight</h1>
+          <p class="subhead" data-i18n="popup.tagline">Private, on-device content blur</p>
+        </div>
+        <label class="language-control" for="language">
+          <span data-i18n="common.language">Language</span>
+          <select id="language" aria-label="Language" data-i18n-aria-label="common.language">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+          </select>
+        </label>
+      </div>
+      <section id="consent-panel" class="consent-panel">
+        <h2 data-i18n="consent.title">Before Protection starts</h2>
+        <p data-i18n="consent.description">To cover unwanted content, ClearSight reads the current page URL, media URLs and pixels, nearby link destinations, and limited page labels and navigation text, including in eligible embedded frames. It checks them locally while Protection is on. This page information and results are not sent to ClearSight or saved in extension storage. Your settings are saved in Chrome's local extension storage.</p>
+        <p data-i18n="consent.source-note">If a site blocks direct media access, ClearSight may request eligible media from its source using your browser session. That site receives the request.</p>
+        <p class="hint" data-i18n="accuracy.caution">ClearSight can miss unsafe content or cover safe content by mistake. Model scores are not accuracy guarantees.</p>
+        <p><a href="privacy.html" target="_blank" rel="noopener noreferrer" data-i18n="policy.read">Read the full privacy policy</a></p>
+        <label class="consent-check"><input id="consent-accept" type="checkbox"><span data-i18n="consent.agreement">I agree to this local processing so ClearSight can check page content.</span></label>
+        <button id="consent-enable" type="button" disabled data-i18n="consent.enable">Agree and enable Protection</button>
+        <p id="consent-status" role="status" aria-live="polite"></p>
+        <p class="hint" data-i18n="consent.dismiss">You can close this popup without enabling ClearSight. Protection stays off until you agree.</p>
+      </section>
+      <section id="settings-panel" hidden>
+      <p class="privacy-notice" data-i18n="privacy.notice">With Protection on, ClearSight reads page URLs, media and nearby links to check content locally. This page information and the results are not sent to ClearSight or saved in extension storage.</p>
+      <label class="toggle"><span data-i18n="toggle.protection">Protection</span><input id="enabled" type="checkbox"></label>
+      <button id="tabCapture" type="button" data-i18n="capture.enable">Enable video capture for this tab</button>
+      <p class="hint" data-i18n="capture.hint">Use this when a site blocks video frame access. Capture is local to this tab and passes audio through.</p>
+      <label for="threshold" class="label-row"><span data-i18n="threshold.explicit.title">NSFW score threshold</span><output id="threshold-value"></output></label>
+      <input id="threshold" type="range" min="0.25" max="0.98" step="0.01">
+      <p class="hint" data-i18n="threshold.explicit.hint">Default: 77%. NSFWJS checks explicit-image scores, then NudeNet checks exposed body parts. Still images may receive extra center and corner crop checks. Videos need two positive checks before the cover is applied; NudeNet checks alternate frames.</p>
+      <label for="partThreshold" class="label-row"><span data-i18n="threshold.body.title">Exposed-body-part threshold</span><output id="part-threshold-value"></output></label>
+      <input id="partThreshold" type="range" min="0.15" max="0.80" step="0.01">
+      <p class="hint" data-i18n="threshold.body.hint">Default: 61%. Lower settings catch weaker body-part detections and can also flag safe images.</p>
+      <p class="hint" data-i18n="accuracy.caution">ClearSight can miss unsafe content or cover safe content by mistake. Model scores are not accuracy guarantees.</p>
+      <label class="toggle"><span data-i18n="toggle.videos">Check videos during playback</span><input id="blurVideos" type="checkbox"></label>
+      <p class="hint" data-i18n="video.hint">Video checks run during focused, visible playback, starting with an immediate sample and continuing about every 600 ms. Checks pause with the video or tab. Visible GIFs are checked about every second while Protection is on. Inaccessible or paused media can remain covered until a usable frame or poster is available.</p>
+      <p id="status" role="status" data-i18n="status.local">Media is analyzed on this device.</p>
+      <details class="privacy-access">
+        <summary data-i18n="privacy.summary">Privacy &amp; website access</summary>
+        <div class="privacy-copy">
+          <p data-i18n="privacy.access1">ClearSight needs access to websites you visit to read page URLs, media sources and pixels, and nearby link destinations for images, thumbnails, GIFs, CSS backgrounds, and videos, including eligible embedded frames. Scanning runs while Protection is on. These values and classifier results are processed in memory and are not sent to ClearSight or saved in extension storage.</p>
+          <p data-i18n="privacy.access2">The bundled NSFWJS and NudeNet models analyze media on this device. For protected cross-origin media, the extension may request it from its source website using your browser session; that site receives the normal request.</p>
+          <p data-i18n="privacy.access3">Optional tab capture is only used after you enable it and grant Chrome permission. Captured frames and audio stay local; audio is passed through to keep playback working.</p>
+          <a href="privacy.html" target="_blank" rel="noopener noreferrer"><span data-i18n="policy.read">Read the full privacy policy</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </details>
+      <section class="support-card" aria-label="Support ClearSight" data-i18n-aria-label="support.aria">
+        <div class="support-copy">
+          <strong data-i18n="support.title">Enjoying ClearSight?</strong>
+          <span data-i18n="support.description">Help this private project grow.</span>
+        </div>
+        <a class="support-link" href="https://ko-fi.com/drjormo" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">♥</span> <span data-i18n="support.link">Support on Ko-fi</span> <span class="support-arrow" aria-hidden="true">↗</span>
+        </a>
+      </section>
+      <button id="withdraw-consent" class="secondary-button" type="button" data-i18n="consent.withdraw">Withdraw consent and disable ClearSight</button>
+      </section>
+      <footer class="project-footer">
+        <p><span data-i18n="project.source">Looking for the project's open-source code?</span> <a href="https://github.com/feitan09P" target="_blank" rel="noopener noreferrer" data-i18n="project.github">Visit my GitHub.</a></p>
+      </footer>
+    </main>
+    <script src="popup-i18n.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
